@@ -3,12 +3,13 @@ from domains.enums.user_profile_status import UserProfileStatus
 
 class Insurance:
 
-    def __init__(self, score: int):
+    def __init__(self,
+                 score: int,
+                 age: int,
+                 income: int):
+
         self.score = score
         self._profile = None
-
-    def _set_score(self):
-        pass
 
     @property
     def name(self):
@@ -24,6 +25,10 @@ class Insurance:
             else:
                 self._profile = UserProfileStatus.RESPONSIBLE
         return self._profile
+
+    @profile.setter
+    def profile(self, profile):
+        self._profile = profile
 
     def __str__(self):
         return self.__repr__()
