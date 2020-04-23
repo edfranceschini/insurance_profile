@@ -1,6 +1,6 @@
 ## INSURANCE PROFILE
 <p align="center">
-    <img src=https://travis-ci.com/edfranceschini/insurance_profile.svg?branch=master" alt="Build Status">
+    <img src="https://travis-ci.com/edfranceschini/insurance_profile.svg?branch=master" alt="Build Status">
     <a href="https://codecov.io/gh/edfranceschini/insurance_profile" target="_blank">
         <img src="https://codecov.io/gh/edfranceschini/insurance_profile/branch/master/graph/badge.svg" alt="Coverage">
     </a>
