@@ -1,4 +1,4 @@
-from .enums.user_profile_status import UserProfileStatus
+from domains.enums.user_profile_status import UserProfileStatus
 
 
 class Insurance:
