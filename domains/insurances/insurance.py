@@ -1,19 +1,24 @@
-from domains.enums.user_profile_status import UserProfileStatus
+from domains.enums import UserProfileStatus
 
 
 class Insurance:
 
-    def __init__(self,
-                 score: int,
-                 age: int,
-                 income: int):
+    def __init__(self, score: int):
 
-        self.score = score
+        self._score = score
         self._profile = None
 
     @property
     def name(self):
         return type(self).__name__
+
+    @property
+    def score(self):
+        return self._score
+
+    @score.setter
+    def score(self, score):
+        self._score = score
 
     @property
     def profile(self):
