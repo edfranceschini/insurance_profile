@@ -1,0 +1,9 @@
+language: python
+python:
+  - "3.7"
+  - "pypy3"
+install:
+  - pip install -r requirements/development.txt
+script: pytest --cov=domain --cov=api --cov-report=term-missing ${@}
+after_script:
+  - bash <(curl -s https://codecov.io/bash)
