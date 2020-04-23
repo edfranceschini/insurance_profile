@@ -1,8 +1,8 @@
 ## INSURANCE PROFILE
 <p align="center">
-    <img src="https://travis-ci.org/RafaelFTeixeira/risk_profile.svg?branch=master" alt="Build Status">
-    <a href="https://codecov.io/gh/RafaelFTeixeira/risk_profile" target="_blank">
-        <img src="https://codecov.io/gh/RafaelFTeixeira/risk_profile/branch/master/graph/badge.svg" alt="Coverage">
+    <img src=https://travis-ci.com/edfranceschini/insurance_profile.svg?branch=master" alt="Build Status">
+    <a href="https://codecov.io/gh/edfranceschini/insurance_profile" target="_blank">
+        <img src="https://codecov.io/gh/edfranceschini/insurance_profile/branch/master/graph/badge.svg" alt="Coverage">
     </a>
 <p>
     Origin take home assigment
@@ -19,7 +19,7 @@
 
 # Run tests
  -  install dependencies
-    -  `pip install -r requirements/dev.txt`
+    -  `pip install -r requirements/development.txt`
  - run all tests
     -  `pytest`
 -  code coverage:
