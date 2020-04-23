@@ -8,10 +8,10 @@
     Origin take home assigment
 
 # Getting Started
- -  install dependencies
+ -  install requirements
     -	`pip install -r requirements.txt`
  -  run the project
-    -  `uvicorn main:app --reload`
+    -  `uvicorn main:app `
 
 # Documentation API
  -  `http://localhost:8000`
