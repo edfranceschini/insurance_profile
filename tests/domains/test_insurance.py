@@ -1,4 +1,5 @@
-from domains import UserProfileStatus, Insurance
+from domains import Insurance
+from domains.enums import UserProfileStatus
 
 
 class TestInsurance:

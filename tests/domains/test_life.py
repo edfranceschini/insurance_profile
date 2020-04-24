@@ -1,4 +1,4 @@
-from domains.enums import UserProfileStatus, MaritalStatus
+from domains.enums import MaritalStatus
 from domains import Life
 
 
