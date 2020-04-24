@@ -11,7 +11,7 @@ class Disability(Insurance):
                  marital_status: MaritalStatus,
                  house: OwnershipStatus,
                  has_dependents: bool):
-        super().__init__(score)
+        super().__init__(score, age, income)
         self._score_amount = 1
         self._update_profile(age, income, house, marital_status, has_dependents)
 

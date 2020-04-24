@@ -3,9 +3,9 @@ from .insurance import Insurance
 
 
 class Home(Insurance):
-    def __init__(self, score: int, house_ownership_status: OwnershipStatus):
+    def __init__(self, score: int, age: int, income: int, house_ownership_status: OwnershipStatus):
         self._score_amount = 1
-        super().__init__(score)
+        super().__init__(score, age, income)
         self._update_profile(house_ownership_status)
 
     def _update_profile(self, house_ownership_status):

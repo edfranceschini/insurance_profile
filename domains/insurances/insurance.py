@@ -3,10 +3,12 @@ from domains.enums import UserProfileStatus
 
 class Insurance:
 
-    def __init__(self, score: int):
-
+    def __init__(self, score: int, age: int, income: int):
+        self.age = age
+        self.income = income
         self._score = score
         self._profile = None
+        self.income_threshold_good = 200000
 
     @property
     def name(self):
@@ -14,6 +16,16 @@ class Insurance:
 
     @property
     def score(self):
+        # Age all lines deduction
+        if self.age < 30:
+            self._score -= 2
+        elif self.age > 30 < 40:
+            self._score -= 1
+
+        # Income all lines deduction
+        if self.income > self.income_threshold_good:
+            self._score -= 1
+
         return self._score
 
     @score.setter

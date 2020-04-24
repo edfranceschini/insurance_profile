@@ -3,9 +3,9 @@ from domains.enums import UserProfileStatus, MaritalStatus
 
 
 class Life(Insurance):
-    def __init__(self, score, age: int, has_dependents: bool, marital_status: MaritalStatus):
+    def __init__(self, score, age: int, income: int, has_dependents: bool, marital_status: MaritalStatus):
         self._score_amount = 1
-        super().__init__(score)
+        super().__init__(score, age, income)
         self._update_profile(age, has_dependents, marital_status)
 
     def _update_profile(self, age, has_dependents, marital_status):
