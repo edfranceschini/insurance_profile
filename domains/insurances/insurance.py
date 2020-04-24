@@ -6,31 +6,27 @@ class Insurance:
     def __init__(self, score: int, age: int, income: int):
         self.age = age
         self.income = income
-        self._score = score
+        self.score = score
         self._profile = None
         self.income_threshold_good = 200000
+        self.set_score()
 
     @property
     def name(self):
         return type(self).__name__
 
-    @property
-    def score(self):
+    def set_score(self):
         # Age all lines deduction
         if self.age < 30:
-            self._score -= 2
+            self.score -= 2
         elif self.age > 30 < 40:
-            self._score -= 1
+            self.score -= 1
 
         # Income all lines deduction
         if self.income > self.income_threshold_good:
-            self._score -= 1
+            self.score -= 1
 
-        return self._score
-
-    @score.setter
-    def score(self, score):
-        self._score = score
+        return self.score
 
     @property
     def profile(self):
