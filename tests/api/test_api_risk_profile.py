@@ -22,7 +22,6 @@ class TestApiUser:
         }
 
         response = self.client.post(self.url, json=input_data)
-
         assert response.status_code == ERROR_STATUS_CODE
 
     def test_should_assert_dependents_equal_to_or_greater_than_zero(self):
@@ -35,7 +34,6 @@ class TestApiUser:
         }
 
         response = self.client.post(self.url, json=input_data)
-
         assert response.status_code == ERROR_STATUS_CODE
 
     def test_should_assert_ineligible_auto_insurance_when_customer_has_no_vehicle(self):
@@ -49,7 +47,6 @@ class TestApiUser:
         auto_profile_expected = INELIGIBLE
 
         response = self.client.post(self.url, json=input_data).json()
-
         assert auto_profile_expected == response['auto']
 
     def test_should_assert_ineligible_home_insurance_when_customer_has_no_home(self):
@@ -63,7 +60,6 @@ class TestApiUser:
         home_profile_expected = INELIGIBLE
 
         response = self.client.post(self.url, json=input_data).json()
-
         assert home_profile_expected == response['home']
 
     def test_should_assert_income_equal_to_or_greater_than_zero(self):
@@ -76,7 +72,6 @@ class TestApiUser:
         }
 
         response = self.client.post(self.url, json=input_data)
-
         assert response.status_code == ERROR_STATUS_CODE
 
     def test_should_assert_marital_status(self):
@@ -89,7 +84,6 @@ class TestApiUser:
         }
 
         response = self.client.post(self.url, json=input_data)
-
         assert response.status_code == ERROR_STATUS_CODE
 
     def test_should_assert_risk_questions_array_length(self):
@@ -102,7 +96,6 @@ class TestApiUser:
         }
 
         response = self.client.post(self.url, json=input_data)
-
         assert response.status_code == ERROR_STATUS_CODE
 
     def test_should_validate_risk_questions_value_range_from_0_to_1(self):
@@ -115,5 +108,4 @@ class TestApiUser:
         }
 
         response = self.client.post(self.url, json=input_data)
-
         assert response.status_code == ERROR_STATUS_CODE
