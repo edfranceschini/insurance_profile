@@ -4,7 +4,7 @@ from domains.enums import MaritalStatus
 from pydantic import BaseModel, Field, validator
 
 
-class User(BaseModel):
+class Customer(BaseModel):
     age: int = Field(
         ...,
         ge=0)
@@ -34,6 +34,6 @@ class User(BaseModel):
 
     @validator('risk_questions')
     def risk_questions_validator(cls, risk_questions):
-        if len(risk_questions) != 3 or [question for question in risk_questions > 1 < 0]:
-            raise ValueError('Incorrect format for risk questions field.')
-
+        if len(risk_questions) != 3 or [question for question in risk_questions if question > 1]:
+            raise ValueError('Incorrect format for risk_questions field')
+        return risk_questions
