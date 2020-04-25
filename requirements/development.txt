@@ -1,6 +1,6 @@
--r base.txt
-
 python-dotenv
 pytest
 pytest-cov
 flake8
+
+-r base.txt
