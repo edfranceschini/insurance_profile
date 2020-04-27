@@ -6,26 +6,6 @@
     </a>
 <p>
     Origin take home assigment
-
-# Getting Started
- -  install requirements
-    -	`pip install -r requirements.txt`
- -  run the project
-    -  `uvicorn main:app `
-
-# Documentation API
- -  `http://localhost:8000`
- -  `http://localhost:8000/docs`
-
-# Run tests
- -  install dependencies
-    -  `pip install -r requirements/development.txt`
- - run all tests
-    -  `pytest`
--  code coverage:
-    -  `pytest --cov=domain --cov=api --cov-report=term-missing ${@}`
-
-
 # Origin Backend Take-Home Assignment
 Origin offers its users an insurance package personalized to their specific needs without requiring the user to understand anything about insurance. This allows Origin to act as their *de facto* insurance advisor.
 
@@ -102,3 +82,25 @@ You may use any language and framework, provided that you build a solid system w
 This assignment should be doable in less than one day. We expect you to learn fast, **communicate with us**, and make decisions regarding its implementation & scope to achieve the expected results on time.
 
 It is not necessary to build the screens a user would interact with, however, as the API is intended to power a user-facing application, we expect the implementation to be as close as possible to what would be necessary in real-life.
+
+
+
+# Getting Started
+ -  install requirements
+    -	`pip install -r requirements.txt`
+ -  run the project
+    -  `uvicorn main:app `
+
+# Documentation API
+ -  `http://localhost:8000`
+ -  `http://localhost:8000/docs`
+
+# Tests
+ -  install dependencies
+    -  `pip install -r requirements/development.txt`
+ - run all tests
+    -  `pytest`
+-  code coverage:
+    -  `pytest --cov=domains --cov=api --cov-report=term-missing ${@}`
+
+
